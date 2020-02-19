@@ -72,7 +72,7 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_it_adds_four_elements
-    skip
+    # skip
     list.push("hello")
     list.push("world")
     list.push("today")

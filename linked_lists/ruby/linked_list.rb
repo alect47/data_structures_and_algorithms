@@ -6,11 +6,8 @@ class LinkedList
   end
 
   def count
-    if @head.nil?
-      0
-    else
-      1
-    end
+    return 0 if empty?
+    count_node(@head, 1)
   end
 
   def push(name)
@@ -38,6 +35,11 @@ private
 
   def set_tail(name)
     last_node(@head).next_node = new_node(name)
+  end
+
+  def count_node(node, counter)
+    return counter if node.tail?
+    count_node(node.next_node, counter += 1)
   end
   # def push(name)
   #   if !@head
