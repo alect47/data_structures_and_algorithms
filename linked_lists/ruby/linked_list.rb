@@ -15,7 +15,7 @@ class LinkedList
   end
 
   def pop
-    
+
   end
 
   def new_node(name)
@@ -33,6 +33,11 @@ class LinkedList
 
 private
 
+  def node_at(node, position, counter = 0)
+    return node if position == counter
+    node_at(node.next_node, position, counter += 1)
+  end
+  
   def set_head(name)
     @head = new_node(name)
   end
