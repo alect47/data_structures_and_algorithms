@@ -18,7 +18,7 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_nodes_have_next_node
-    skip
+    # skip
     n1 = Node.new("pizza")
     n2 = Node.new("cats")
     n1.next_node = n2
@@ -59,7 +59,7 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_it_pushes_three_elements_onto_a_list
-    skip
+    # skip
     list.push("hello")
     assert_equal "hello", list.head.data
     list.push("world")

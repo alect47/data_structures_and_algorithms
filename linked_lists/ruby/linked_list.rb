@@ -16,6 +16,13 @@ class LinkedList
   def push(node)
     if !@head
       @head = Node.new(node)
+    elsif @head.tail?
+      @head.next_node = Node.new(node)
     end
+  end
+
+  def last_node(node)
+    return node if node.tail?
+    last_node(node.next_node)
   end
 end
