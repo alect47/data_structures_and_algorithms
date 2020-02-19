@@ -1,6 +1,9 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'pry'
+require './linked_list'
+require './node'
 
 class LinkedListTest < Minitest::Test
   attr_reader :list
@@ -10,7 +13,6 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_nodes_have_data
-    skip
     node = Node.new("pizza")
     assert_equal "pizza", node.data
   end
@@ -25,34 +27,34 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_it_accepts_next_node_on_init
-    skip
     n1 = Node.new("pizza", Node.new("cats"))
     assert_equal "cats", n1.next_node.data
     assert_equal Node, n1.next_node.class
   end
 
   def test_it_starts_with_zero_elements
-    skip
+    # skip
     assert_equal 0, list.count
   end
 
   def test_a_new_list_starts_with_nil_head
-    skip
+    # skip
     assert_equal nil, LinkedList.new.head
   end
 
   def test_it_pushes_a_single_element_onto_a_list
-    skip
+    # skip
     list.push("pizza")
     assert_equal "pizza", list.head.data
     assert_equal 1, list.count
   end
 
   def test_it_pushes_two_elements
-    skip
+    # skip
     list.push("pizza")
     assert_equal "pizza", list.head.data
     list.push("stromboli")
+    # binding.pry
     assert_equal "stromboli", list.head.next_node.data
   end
 
