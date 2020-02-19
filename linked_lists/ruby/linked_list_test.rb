@@ -65,6 +65,7 @@ class LinkedListTest < Minitest::Test
     list.push("world")
     assert_equal "world", list.head.next_node.data
     list.push("today")
+    # binding.pry
     assert_equal "world", list.head.next_node.data
     assert_equal "today", list.head.next_node.next_node.data
     assert_equal 3, list.count

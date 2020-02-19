@@ -22,7 +22,7 @@ class LinkedList
   end
 
   def empty?
-    head.nil?
+    @head.nil?
   end
 
   def last_node(node)
