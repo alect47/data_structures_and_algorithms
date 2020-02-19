@@ -14,6 +14,10 @@ class LinkedList
     empty? ? set_head(name) : set_tail(name)
   end
 
+  def pop
+    
+  end
+
   def new_node(name)
     Node.new(name)
   end
